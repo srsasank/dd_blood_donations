@@ -207,4 +207,4 @@ mod_fit <- train(result~total_volume+freq+first_time+sqrt_recency,  data=train_f
 mod_fit
 pred = predict(mod_fit, newdata=test_new_data_transformed, type = "prob")
 test$lgr <- pred$High
-write.csv(test,"final_pred2.csv")
+write.csv(test,"xgboost/final_pred2.csv")
